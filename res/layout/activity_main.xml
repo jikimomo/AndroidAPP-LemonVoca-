@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/rotatelogo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="단어장 목록"
+                android:textSize="30dp"
+                android:textColor="#ff000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+            <Button
+                android:id="@+id/completeButton"
+                android:layout_width="85dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:onClick="onClickComButton"
+                android:text="완료"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:background="@drawable/deletebutton_shape"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/dictList"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginHorizontal="20dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/plusFab"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="24dp"
+        android:backgroundTint="#ffffff"
+        android:visibility="invisible"
+        android:src="@drawable/fabdel"
+        app:borderWidth="0dp"
+        app:fabSize="auto" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/plusFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menuFab"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#ffffff"
+        android:visibility="invisible"
+        android:src="@drawable/fabadd"
+        app:borderWidth="0dp"
+        app:fabSize="auto" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#fcd23e"
+        android:src="@drawable/fabmenu"
+        app:borderWidth="0dp"
+        app:fabSize="auto" />
+
+</RelativeLayout>
